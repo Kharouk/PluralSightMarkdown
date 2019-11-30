@@ -13,6 +13,6 @@ for note in notes do
   markdown_text << "#{text} - #{submodule} - #{time}\n"
 end
 
-puts markdown_text
-
-File.write("markdown_notes.md", markdown_text)
+file = File.open("markdown_notes.md", 'a')
+file.write(markdown_text)
+file.close
